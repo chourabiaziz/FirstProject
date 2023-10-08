@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthorController!
+{% endblock %}
+
+{% block body %}
+
+
+
+
+{% for i in auth %}
+
+{% if i.nb_books > 0 %}
+name : {{i.username | upper}} , nb books : {{i.nb_books}}
+
+<button> buy</button>
+<a href="/author/{{i.id}}"> details </a> <br>
+<img src="{{i.picture}}" width="200px" height="200px">
+
+
+
+{% endif %}
+
+
+{% endfor %}
+
+{% endblock %}
